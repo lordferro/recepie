@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { Title, Wrapper } from './Recipe.styled';
 import { RecipeInfo } from 'components/RecipeInfo/RecipeInfo';
 import { RecipeDifficulty } from 'components/RecipeDifficulty/RecipeDifficulty';
@@ -13,3 +14,12 @@ export const Recipe = ({
     </Wrapper>
   );
 };
+
+
+Recipe.propTypes = {
+  name:PropTypes.string,
+  time: PropTypes.string,
+  servings: PropTypes.number,
+  calories: PropTypes.number,
+  difficulty: PropTypes.oneOf(["easy","medium","hard"])
+}
