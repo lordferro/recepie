@@ -1,11 +1,15 @@
+import { Badge, BadgeList, Title, Wrapper } from './RecipeDifficulty.styled';
+
 export const RecipeDifficulty = ({ difficulty }) => {
-    console.log(difficulty)
   return (
-    <div>
-      <h3>difficulty</h3>
-      <span>easy</span>
-      <span>medium</span>
-      <span>hard</span>
-    </div>
+    <Wrapper>
+      <Title>difficulty</Title>
+      <BadgeList>
+        {/* передаём пропс active в зависимости чему равен difficulty */}
+        <Badge active={difficulty === 'easy'}>easy </Badge>
+        <Badge active={difficulty === 'medium'}>medium </Badge>
+        <Badge active={difficulty === 'hard'}>hard </Badge>
+      </BadgeList>
+    </Wrapper>
   );
 };

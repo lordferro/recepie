@@ -1,12 +1,13 @@
-import { Recipe } from './Recipe/Recipe';
+import { Recipe } from '../Recipe/Recipe';
+import { ListItem } from './RecipeList.styled';
 
 export const RecipeList = ({ recipes }) => {
   return (
     <ul>
       {recipes.map(recipe => (
-        <li key={recipe.id}>
+        <ListItem key={recipe.id}>
           <Recipe recipe={recipe} />
-        </li>
+        </ListItem>
       ))}
     </ul>
   );
